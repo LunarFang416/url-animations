@@ -75,7 +75,7 @@ class Spinner_03 extends Spinner {
   };
 }
 class Spinner_04 extends Spinner {
-  name: string = "Source_04";
+  name: string = "Spinner_04";
   creator: string = "lunarfang_416";
   baseState: State = {
     index: 0,
@@ -87,7 +87,7 @@ class Spinner_04 extends Spinner {
 }
 
 class Spinner_05 extends Spinner {
-  name: string = "Source_05";
+  name: string = "Spinner_05";
   creator: string = "lunarfang_416";
   baseState: State = {
     index: 0,
@@ -99,7 +99,7 @@ class Spinner_05 extends Spinner {
 }
 
 class Spinner_06 extends Spinner {
-  name: string = "Source_06";
+  name: string = "Spinner_06";
   creator: string = "lunarfang_416";
   baseState: State = {
     index: 0,
@@ -111,7 +111,7 @@ class Spinner_06 extends Spinner {
 }
 
 class Spinner_07 extends Spinner {
-  name: string = "Source_07";
+  name: string = "Spinner_07";
   creator: string = "lunarfang_416";
   baseState: State = {
     index: 0,
@@ -123,7 +123,7 @@ class Spinner_07 extends Spinner {
 }
 
 class Spinner_08 extends Spinner {
-  name: string = "Source_08";
+  name: string = "Spinner_08";
   creator: string = "lunarfang_416";
   baseState: State = {
     index: 0,
@@ -134,7 +134,7 @@ class Spinner_08 extends Spinner {
   };
 }
 class Spinner_09 extends Spinner {
-  name: string = "Source_09";
+  name: string = "Spinner_09";
   creator: string = "lunarfang_416";
   baseState: State = {
     index: 0,
@@ -145,7 +145,7 @@ class Spinner_09 extends Spinner {
   };
 }
 class Spinner_10 extends Spinner {
-  name: string = "Source_10";
+  name: string = "Spinner_10";
   creator: string = "lunarfang_416";
   baseState: State = {
     index: 0,
@@ -156,7 +156,7 @@ class Spinner_10 extends Spinner {
   };
 }
 class Spinner_11 extends Spinner {
-  name: string = "Source_11";
+  name: string = "Spinner_11";
   creator: string = "lunarfang_416";
   baseState: State = {
     index: 0,
