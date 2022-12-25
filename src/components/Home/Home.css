@@ -1,0 +1,9 @@
+.home-div{
+  color: red;
+}
+
+.animation-div{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin: 0 20px;
+}
