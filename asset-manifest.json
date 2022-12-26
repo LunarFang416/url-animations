@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/url-animations/static/css/main.d044c108.css",
-    "main.js": "/url-animations/static/js/main.636aae84.js",
+    "main.css": "/url-animations/static/css/main.be63099d.css",
+    "main.js": "/url-animations/static/js/main.bc82906d.js",
+    "static/media/bmc-logo.png": "/url-animations/static/media/bmc-logo.5bfb23565c8e62f8f6e4.png",
     "index.html": "/url-animations/index.html",
-    "main.d044c108.css.map": "/url-animations/static/css/main.d044c108.css.map",
-    "main.636aae84.js.map": "/url-animations/static/js/main.636aae84.js.map"
+    "main.be63099d.css.map": "/url-animations/static/css/main.be63099d.css.map",
+    "main.bc82906d.js.map": "/url-animations/static/js/main.bc82906d.js.map"
   },
   "entrypoints": [
-    "static/css/main.d044c108.css",
-    "static/js/main.636aae84.js"
+    "static/css/main.be63099d.css",
+    "static/js/main.bc82906d.js"
   ]
 }
