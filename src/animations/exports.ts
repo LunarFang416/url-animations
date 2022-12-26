@@ -41,7 +41,6 @@ const ANIMATIONS: Record<string, BaseAnimation> = {
   Source_03: new Source_03(),
   Source_04: new Source_04(),
   Source_05: new Source_05(),
-  Test: Test,
   Spinner_01: new Spinner_01(),
   Spinner_02: new Spinner_02(),
   Spinner_03: new Spinner_03(),
