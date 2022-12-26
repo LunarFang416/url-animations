@@ -2,6 +2,25 @@
   color: red;
 }
 
+.home-top{
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.home-logo{
+  max-width:100px;
+  max-height:30px;
+  width: auto;
+  height: auto;
+  margin: 0 10px;
+}
+
+.logo-div{
+  display: flex;
+  align-items:center;
+}
+
 .animation-div{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
