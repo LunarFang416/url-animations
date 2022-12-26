@@ -4,6 +4,8 @@ Simulate Ascii art animations througgh your browsers URL field.
 Supported Browsers are: Chrome, Opera GX, Firefox
 (Dont try Safari)
 
+https://user-images.githubusercontent.com/73078183/209571272-a7110cbf-7fb4-4b21-b198-1f9968b92a00.mov
+
 ## How to contribute 
 
 Have ASCII art that you want to share? Follow these steps and your art will be uploaded
