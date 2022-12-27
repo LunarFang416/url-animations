@@ -8,7 +8,7 @@ import coffee from "../assets/bmc-logo.png";
 import "./Home.css";
 
 const Home = () => {
-  const [animation, setAnimation] = React.useState(ANIMATIONS.Shark);
+  const [animation, setAnimation] = React.useState(ANIMATIONS.Default);
 
   return (
     <div className="home-div">
