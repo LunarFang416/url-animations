@@ -1,40 +1,18 @@
-import { useEffect, useState } from "react"
+import React from "react";
 import Animation from "../Animation/Animation";
 import ANIMATIONS from "../../animations/exports";
-import BaseAnimation from "../../animations/base";
+import Hashmovie from "../Hashmovie";
 
-import github from "../assets/github-mark.png"
-import coffee from "../assets/bmc-logo.png"
-import "./Home.css"
+import github from "../assets/github-mark.png";
+import coffee from "../assets/bmc-logo.png";
+import "./Home.css";
 
 const Home = () => {
-  const [animation, setAnimation] = useState(ANIMATIONS.Default);
-  const [frame, setFrame] = useState("");
-  const [state, setState] = useState<any>(animation.baseState);
-
-  useEffect(() => {
-    let timeStamp = state?.pastTimeStamp ? state?.pastTimeStamp : 0 ;
-    const interval = setInterval(() => {
-      const { nextFrame, ...nextState } = animation.nextState(timeStamp, state);
-      setFrame(nextFrame);
-      setState(nextState);
-      timeStamp += 50
-    }, 50);
-    return () => clearInterval(interval);
-  }, [animation]);
-
-  useEffect(() => {
-    window.history.pushState(null, "", `/#${frame}`);
-  }, [frame]);
-
-  const changeAnimation = (animation: BaseAnimation): void => {
-    setAnimation(animation);
-    setFrame("")
-    setState(animation.baseState)
-  }
+  const [animation, setAnimation] = React.useState(ANIMATIONS.Shark);
 
   return (
     <div className="home-div">
+      <Hashmovie animation={animation} />
       <div className="home-top">
         <h1 style={{ marginLeft: "20px" }}>--------^</h1>
         <div style={{ display: "flex" }}>
@@ -65,7 +43,7 @@ const Home = () => {
           return (
             <Animation
               animation={ANIMATIONS[item]}
-              changeAnimation={changeAnimation}
+              changeAnimation={setAnimation}
               key={i}
             />
           );
@@ -73,6 +51,6 @@ const Home = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Home;
