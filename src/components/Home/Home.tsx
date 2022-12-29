@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import Animation from "../Animation/Animation";
 import ANIMATIONS from "../../animations/exports";
 import BaseAnimation from "../../animations/base";
+import URLAnimation from "../../hook";
 
 import github from "../assets/github-mark.png"
 import coffee from "../assets/bmc-logo.png"
@@ -9,34 +10,17 @@ import "./Home.css"
 
 const Home = () => {
   const [animation, setAnimation] = useState(ANIMATIONS.Default);
-  const [frame, setFrame] = useState("");
-  const [state, setState] = useState<any>(animation.baseState);
-
+  const [loading, setLoading] = useState(true)
+  const URL = URLAnimation();
   useEffect(() => {
-    let timeStamp = state?.pastTimeStamp ? state?.pastTimeStamp : 0 ;
-    const interval = setInterval(() => {
-      const { nextFrame, ...nextState } = animation.nextState(timeStamp, state);
-      setFrame(nextFrame);
-      setState(nextState);
-      timeStamp += 50
-    }, 50);
-    return () => clearInterval(interval);
-  }, [animation]);
-
-  useEffect(() => {
-    window.history.pushState(null, "", `/#${frame}`);
-  }, [frame]);
-
-  const changeAnimation = (animation: BaseAnimation): void => {
-    setAnimation(animation);
-    setFrame("")
-    setState(animation.baseState)
-  }
+    URL.start(ANIMATIONS.Default);
+  },[])
 
   return (
     <div className="home-div">
       <div className="home-top">
         <h1 style={{ marginLeft: "20px" }}>--------^</h1>
+        <button onClick={() => URL.stop()}>click me</button>
         <div style={{ display: "flex" }}>
           <span className="logo-div">
             <h4>contribute </h4>
@@ -60,12 +44,13 @@ const Home = () => {
           </span>
         </div>
       </div>
+      <p style={{'color':'white'}}>{URL.frame}</p>
       <div className="animation-div">
         {Object.keys(ANIMATIONS).map((item, i) => {
           return (
             <Animation
               animation={ANIMATIONS[item]}
-              changeAnimation={changeAnimation}
+              changeAnimation={() => URL.start(ANIMATIONS[item])}
               key={i}
             />
           );
