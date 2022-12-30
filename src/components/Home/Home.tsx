@@ -10,8 +10,6 @@ import coffee from "../../assets/bmc-logo.png"
 import "./Home.css"
 
 const Home = () => {
-  const [customAmimation, setCustomAnimation] = useState("");
-  const [frameRate, setFrameRate] = useState(100);
   const URL = URLAnimation();
   useEffect(() => {
     URL.start(ANIMATIONS.Default);
