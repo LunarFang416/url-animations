@@ -1,27 +1,53 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react"
 import Animation from "../Animation/Animation";
+import Custom from "../Custom/Custom";
 import ANIMATIONS from "../../animations/exports";
 import BaseAnimation from "../../animations/base";
-import URLAnimation from "../../hook";
 
-import github from "../assets/github-mark.png"
-import coffee from "../assets/bmc-logo.png"
+import URLAnimation from "../../hook";
+import github from "../../assets/github-mark.png"
+import coffee from "../../assets/bmc-logo.png"
 import "./Home.css"
 
 const Home = () => {
-  const [animation, setAnimation] = useState(ANIMATIONS.Default);
-  const [loading, setLoading] = useState(true)
+  const [customAmimation, setCustomAnimation] = useState("");
+  const [frameRate, setFrameRate] = useState(100);
   const URL = URLAnimation();
   useEffect(() => {
     URL.start(ANIMATIONS.Default);
-  },[])
+  }, [])
 
   return (
     <div className="home-div">
       <div className="home-top">
-        <h1 style={{ marginLeft: "20px" }}>--------^</h1>
-        <button onClick={() => URL.stop()}>click me</button>
-        <div style={{ display: "flex" }}>
+        <h1>--------^</h1>
+        <div className="homeTitle">
+          ██╗░░░░░░█████╗░░█████╗░██████╗░██╗███╗░░██╗░██████╗░  ██╗░░░██╗██████╗░██╗░░░░░
+          <br></br>
+          ██║░░░░░██╔══██╗██╔══██╗██╔══██╗██║████╗░██║██╔════╝░  ██║░░░██║██╔══██╗██║░░░░░
+          <br></br>
+          ██║░░░░░██║░░██║███████║██║░░██║██║██╔██╗██║██║░░██╗░  ██║░░░██║██████╔╝██║░░░░░
+          <br></br>
+          ██║░░░░░██║░░██║██╔══██║██║░░██║██║██║╚████║██║░░╚██╗  ██║░░░██║██╔══██╗██║░░░░░
+          <br></br>
+          ███████╗╚█████╔╝██║░░██║██████╔╝██║██║░╚███║╚██████╔╝  ╚██████╔╝██║░░██║███████╗
+          <br></br>
+          ╚══════╝░╚════╝░╚═╝░░╚═╝╚═════╝░╚═╝╚═╝░░╚══╝░╚═════╝░  ░╚═════╝░╚═╝░░╚═╝╚══════╝
+          <br></br>
+          ░█████╗░███╗░░██╗██╗███╗░░░███╗░█████╗░████████╗██╗░█████╗░███╗░░██╗░██████╗
+          <br></br>
+          ██╔══██╗████╗░██║██║████╗░████║██╔══██╗╚══██╔══╝██║██╔══██╗████╗░██║██╔════╝
+          <br></br>
+          ███████║██╔██╗██║██║██╔████╔██║███████║░░░██║░░░██║██║░░██║██╔██╗██║╚█████╗░
+          <br></br>
+          ██╔══██║██║╚████║██║██║╚██╔╝██║██╔══██║░░░██║░░░██║██║░░██║██║╚████║░╚═══██╗
+          <br></br>
+          ██║░░██║██║░╚███║██║██║░╚═╝░██║██║░░██║░░░██║░░░██║╚█████╔╝██║░╚███║██████╔╝
+          <br></br>
+          ╚═╝░░╚═╝╚═╝░░╚══╝╚═╝╚═╝░░░░░╚═╝╚═╝░░╚═╝░░░╚═╝░░░╚═╝░╚════╝░╚═╝░░╚══╝╚═════╝░
+          <br></br>
+        </div>
+        <div className="homeLinks">
           <span className="logo-div">
             <h4>contribute </h4>
             <a
@@ -44,7 +70,7 @@ const Home = () => {
           </span>
         </div>
       </div>
-      <p style={{'color':'white'}}>{URL.frame}</p>
+      <Custom URL={URL} />
       <div className="animation-div">
         {Object.keys(ANIMATIONS).map((item, i) => {
           return (

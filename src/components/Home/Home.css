@@ -5,7 +5,14 @@
 .home-top{
   display: flex;
   justify-content:space-between;
-  align-items:center;
+  align-items: self-start;
+  margin: 0 30px;
+}
+
+.homeLinks{
+  display: flex;
+  flex-direction: column;
+  align-items: self-end;
 }
 
 .home-logo{
@@ -24,5 +31,10 @@
 .animation-div{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  margin: 0 20px;
+  margin: 20px 20px;
+}
+
+.homeTitle{
+  white-space: pre;
+  text-align: center;
 }

@@ -1,10 +1,9 @@
-import { useState, useEffect, useRef } from 'react';
 import BaseAnimation from './animations/base';
 
 const URLAnimation = () => {
-  let interval: any;
   let frame = "";
-
+  let interval: any;
+  
   const start = (animation: BaseAnimation) => {
     let state = animation.baseState;
     if(interval) clearInterval(interval);
@@ -22,7 +21,7 @@ const URLAnimation = () => {
   }
 
   return {
-    frame, start, stop
+    start, stop
   }
 }
 

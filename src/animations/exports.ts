@@ -24,9 +24,13 @@ import {
   Spinner_11,
 } from "./spinners";
 import Test from "./test";
+import OG_Loader from "./og_loader";
+import Custom from "./custom";
 
 const ANIMATIONS: Record<string, BaseAnimation> = {
   Default: Default,
+  // Custom: new Custom(["b", "bb", "bbb"]),
+  OG_Loader: OG_Loader,
   Shark: Shark,
   Swim: Swim,
   Plane: Plane,

@@ -1,0 +1,74 @@
+.custom-animation-button{
+  width: 100%;
+  background: none;
+  border: 2px solid #000;
+  /* padding: 10px 60px; */
+  font-size: 1rem;
+  color: red
+  
+}
+
+.custom-animation-button:hover{
+  /* border: 2px solid #dfdeff;; */
+  background: rgb(29, 28, 28);
+  border-radius: 10px;
+}
+
+.custom-config{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.custom-slider {
+  -webkit-appearance: none;
+  width: 200px;
+  height: 7px;
+  background: #000;
+  outline: none;
+  border: 3px solid red;
+  border-radius: 8px;
+  margin: 20px;
+}
+
+
+/* for chrome/safari */
+.custom-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 30px;
+  background: #000;
+  cursor: pointer;
+  border: 3px solid red;
+  background-color:red;
+  border-radius: 4px;
+}
+
+/* for firefox */
+.custom-slider::-moz-range-thumb {
+  width: 10px;
+  height: 30px;
+  background: #000;
+  cursor: pointer;
+  border: 5px solid lawngreen;
+  border-radius: 4px;
+}
+
+.custom-frames{
+  width: 50%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #000000;
+  font-size: 16px;
+  resize: none;
+  color: red;
+}
+.custom-frames:focus{
+  outline: none !important;
+  border: 1px solid red;
+}
