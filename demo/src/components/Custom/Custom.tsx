@@ -1,12 +1,9 @@
 import { useState, useEffect } from "react";
-import CustomAnimation from "../../animations/custom";
-import Animation from "../Animation/Animation";
-import URLAnimation from "../../hook";
+import { Custom as CustomAnimation } from "url-animations";
 
 import "./Custom.css"
 
-
-const Custom = ( {URL}: {URL: any} ) => {
+const CustomCard = ( {URL}: {URL: any} ) => {
   const CustomAnimationObj = new CustomAnimation();
   const [frames, setFrames] = useState(
     "(>'-')>\n^('-')^\n<('-'<)\n^('-')^"
@@ -29,6 +26,7 @@ const Custom = ( {URL}: {URL: any} ) => {
           setEnabled(!enabled);
         }}
       >
+        {enabled && <div className="dot"></div>}
         <h4>{CustomAnimationObj.name.toLowerCase()}</h4>
         <h5>by: {CustomAnimationObj.creator.toLowerCase()}</h5>
       </button>
@@ -63,4 +61,4 @@ const Custom = ( {URL}: {URL: any} ) => {
 }
 
 
-export default Custom;
+export default CustomCard;

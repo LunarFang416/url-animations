@@ -2,10 +2,9 @@
   width: 100%;
   background: none;
   border: 2px solid #000;
-  /* padding: 10px 60px; */
   font-size: 1rem;
-  color: red
-  
+  color: red;
+  position: relative;
 }
 
 .custom-animation-button:hover{
@@ -71,4 +70,15 @@
 .custom-frames:focus{
   outline: none !important;
   border: 1px solid red;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 100%;
+  background: lightgreen;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin:6px;
 }

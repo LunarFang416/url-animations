@@ -22,6 +22,9 @@
   height: auto;
   margin: 0 10px;
 }
+.home-logo-npm{
+  max-height:35px;
+}
 
 .logo-div{
   display: flex;
@@ -37,4 +40,11 @@
 .homeTitle{
   white-space: pre;
   text-align: center;
+}
+
+.logo-div > a{
+  text-decoration: none;
+  display:flex;
+  align-items:center;
+  color:red;
 }

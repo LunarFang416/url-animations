@@ -1,21 +1,18 @@
-import BaseAnimation from "./base";
+import BaseAnimation from './base';
 
 interface State {
-  index: number
+  index: number;
 }
 
 const Test: BaseAnimation = {
-  name: "Test",
-  creator: "LunarFang_416",
+  name: 'Test',
+  creator: 'LunarFang_416',
   baseState: {
-    index: 0
+    index: 0,
   },
-  nextState: (
-    timestamp: number,
-    state: State
-  ): { nextFrame: string; state: State } => {
-    let nextFrame = "←↖↑↗→↘↓↙";
-    return { nextFrame , state };
+  nextState: (timestamp: number, state: State): { nextFrame: string; state: State } => {
+    const nextFrame = '←↖↑↗→↘↓↙';
+    return { nextFrame, state };
   },
 };
 

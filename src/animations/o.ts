@@ -1,4 +1,4 @@
-import BaseAnimation from "./base";
+import BaseAnimation from './base';
 
 interface State {
   pastTimeStamp: number;
@@ -6,43 +6,40 @@ interface State {
 }
 
 const O: BaseAnimation = {
-  name: "O",
-  creator: "LunarFang_416",
+  name: 'O',
+  creator: 'LunarFang_416',
   baseState: {
     pastTimeStamp: 0,
     index: 0,
   },
-  nextState: (
-    timestamp: number,
-    state: State
-  ): { nextFrame: string; state: State } => {
-    var frames = [
-      ":O................#",
-      "..\u00D6................#",
-      "...O:.............#",
-      ".....O\u0324............#",
-      "......:O..........#",
-      "........\u00D6..........#",
-      "..........O:......#",
-      "............O\u0324.....#",
-      ".............:O...#",
-      "...............\u00D6...#",
-      "................O:#",
-      "...............\u00D6...#",
-      ".............:O...#",
-      "............O\u0324.....#",
-      "..........O:......#",
-      "........\u00D6..........#",
-      "......:O..........#",
-      ".....O\u0324............#",
-      "...O:.............#",
-      "..\u00D6................#",
+  nextState: (timestamp: number, state: State): { nextFrame: string; state: State } => {
+    const frames = [
+      ':O................#',
+      '..\u00D6................#',
+      '...O:.............#',
+      '.....O\u0324............#',
+      '......:O..........#',
+      '........\u00D6..........#',
+      '..........O:......#',
+      '............O\u0324.....#',
+      '.............:O...#',
+      '...............\u00D6...#',
+      '................O:#',
+      '...............\u00D6...#',
+      '.............:O...#',
+      '............O\u0324.....#',
+      '..........O:......#',
+      '........\u00D6..........#',
+      '......:O..........#',
+      '.....O\u0324............#',
+      '...O:.............#',
+      '..\u00D6................#',
     ];
     if (timestamp - state.pastTimeStamp > 90) {
-      state.index = (state.index + 1) % frames.length
+      state.index = (state.index + 1) % frames.length;
       state.pastTimeStamp = timestamp;
     }
-    let nextFrame = frames[state.index]
+    const nextFrame = frames[state.index];
     return { nextFrame, state };
   },
 };

@@ -1,4 +1,4 @@
-import BaseAnimation from "./base";
+import BaseAnimation from './base';
 
 interface State {
   index: number;
@@ -7,39 +7,27 @@ interface State {
 }
 
 const Wave2_0: BaseAnimation = {
-  name: "Wave2_0",
-  creator: "LunarFang_416",
+  name: 'Wave2_0',
+  creator: 'LunarFang_416',
   baseState: {
     index: 0,
     right: true,
     prevMouseX: 0,
   },
-  nextState: (
-    timestamp: number,
-    state: State
-  ): { nextFrame: string; state: State } => {
-    let wave = [
-      "\u4DEB",
-      "\u4DCC",
-      "\u4DC9",
-      "\u4DC8",
-      "\u4DCD",
-      "\u4DC8",
-      "\u4DC9",
-      "\u4DCC",
-    ];
-    let nextFrame = "";
+  nextState: (timestamp: number, state: State): { nextFrame: string; state: State } => {
+    const wave = ['\u4DEB', '\u4DCC', '\u4DC9', '\u4DC8', '\u4DCD', '\u4DC8', '\u4DC9', '\u4DCC'];
+    let nextFrame = '';
     for (let i = 0; i < 800; ++i) {
       nextFrame += wave[(i + state.index) % wave.length];
     }
 
-    let currentMouseX = window.pageXOffset;
+    const currentMouseX = window.pageXOffset;
     if (currentMouseX > state.prevMouseX) state.right = true;
     else if (currentMouseX < state.prevMouseX) state.right = false;
     else state.right = state.right;
 
     if (state.right) {
-      nextFrame = nextFrame.split("").reverse().join("");
+      nextFrame = nextFrame.split('').reverse().join('');
       state.right = true;
     } else state.right = false;
 

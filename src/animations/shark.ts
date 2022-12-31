@@ -1,4 +1,4 @@
-import BaseAnimation from "./base";
+import BaseAnimation from './base';
 
 interface State {
   position: number;
@@ -8,24 +8,21 @@ interface State {
 }
 
 const Shark: BaseAnimation = {
-  name: "Shark",
-  creator: "LunarFang_416",
+  name: 'Shark',
+  creator: 'LunarFang_416',
   baseState: {
     position: 0,
     waterLength: 30,
     right: true,
     past: 0,
   },
-  nextState: (
-    timestamp: number,
-    state: State
-  ): { nextFrame: string; state: State } => {
-    let nextFrame = "";
-    let shark = state.right ? "|\\" : "/|";
+  nextState: (timestamp: number, state: State): { nextFrame: string; state: State } => {
+    let nextFrame = '';
+    const shark = state.right ? '|\\' : '/|';
     for (let i = 0; i < state.waterLength; ++i) {
       if (i === state.position) nextFrame += shark;
-      else if (i === state.waterLength - 1) nextFrame += "#";
-      else nextFrame += "_";
+      else if (i === state.waterLength - 1) nextFrame += '#';
+      else nextFrame += '_';
     }
     state.position += state.right ? 1 : -1;
     if (state.position > state.waterLength - 3) state.right = false;

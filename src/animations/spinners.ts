@@ -1,4 +1,4 @@
-import BaseAnimation from "./base";
+import BaseAnimation from './base';
 
 interface State {
   index: number;
@@ -12,14 +12,11 @@ abstract class Spinner implements BaseAnimation {
   abstract name: string;
   abstract creator: string;
   abstract baseState: State;
-  nextState(
-    timeStamp: number,
-    state: State
-  ): { nextFrame: string; state: State } {
-    let nextFrame = ""
+  nextState(timeStamp: number, state: State): { nextFrame: string; state: State } {
+    let nextFrame = '';
     if (timeStamp - state.pastTimeStamp >= state.speed) {
       state.index += 1;
-      state.pastTimeStamp = timeStamp
+      state.pastTimeStamp = timeStamp;
     }
     nextFrame = state.spinner[state.index % state.spinner.length].repeat(state.maxLength);
     return { nextFrame, state };
@@ -27,59 +24,44 @@ abstract class Spinner implements BaseAnimation {
 }
 
 class Spinner_01 extends Spinner {
-  name: string = "Spinner_01";
-  creator: string = "lunarfang_416";
+  name: string = 'Spinner_01';
+  creator: string = 'lunarfang_416';
   baseState: State = {
     index: 0,
-    spinner: ["←", "↖", "↑", "↗", "→", "↘", "↓", "↙"],
+    spinner: ['←', '↖', '↑', '↗', '→', '↘', '↓', '↙'],
     maxLength: 160,
     speed: 150,
-    pastTimeStamp: 0
+    pastTimeStamp: 0,
   };
 }
 class Spinner_02 extends Spinner {
-  name: string = "Spinner_02";
-  creator: string = "lunarfang_416";
+  name: string = 'Spinner_02';
+  creator: string = 'lunarfang_416';
   baseState: State = {
     index: 0,
-    spinner: [
-      "▁",
-      "▂",
-      "▃",
-      "▄",
-      "▅",
-      "▆",
-      "▇",
-      "█",
-      "▇",
-      "▆",
-      "▅",
-      "▄",
-      "▃",
-      "▁",
-    ],
+    spinner: ['▁', '▂', '▃', '▄', '▅', '▆', '▇', '█', '▇', '▆', '▅', '▄', '▃', '▁'],
     maxLength: 160,
     speed: 150,
     pastTimeStamp: 0,
   };
 }
 class Spinner_03 extends Spinner {
-  name: string = "Spinner_03";
-  creator: string = "lunarfang_416";
+  name: string = 'Spinner_03';
+  creator: string = 'lunarfang_416';
   baseState: State = {
     index: 0,
-    spinner: ["▉", "▊", "▋", "▌", "▍", "▎", "▏", "▎", "▍", "▌", "▋", "▊", "▉"],
+    spinner: ['▉', '▊', '▋', '▌', '▍', '▎', '▏', '▎', '▍', '▌', '▋', '▊', '▉'],
     maxLength: 160,
     speed: 150,
     pastTimeStamp: 0,
   };
 }
 class Spinner_04 extends Spinner {
-  name: string = "Spinner_04";
-  creator: string = "lunarfang_416";
+  name: string = 'Spinner_04';
+  creator: string = 'lunarfang_416';
   baseState: State = {
     index: 0,
-    spinner: ["▖", "▘", "▝", "▗"],
+    spinner: ['▖', '▘', '▝', '▗'],
     maxLength: 160,
     speed: 150,
     pastTimeStamp: 0,
@@ -87,11 +69,11 @@ class Spinner_04 extends Spinner {
 }
 
 class Spinner_05 extends Spinner {
-  name: string = "Spinner_05";
-  creator: string = "lunarfang_416";
+  name: string = 'Spinner_05';
+  creator: string = 'lunarfang_416';
   baseState: State = {
     index: 0,
-    spinner: ["┤", "┘", "┴", "└", "├", "┌", "┬", "┐"],
+    spinner: ['┤', '┘', '┴', '└', '├', '┌', '┬', '┐'],
     maxLength: 160,
     speed: 150,
     pastTimeStamp: 0,
@@ -99,11 +81,11 @@ class Spinner_05 extends Spinner {
 }
 
 class Spinner_06 extends Spinner {
-  name: string = "Spinner_06";
-  creator: string = "lunarfang_416";
+  name: string = 'Spinner_06';
+  creator: string = 'lunarfang_416';
   baseState: State = {
     index: 0,
-    spinner: ["◢", "◣", "◤", "◥"],
+    spinner: ['◢', '◣', '◤', '◥'],
     maxLength: 160,
     speed: 150,
     pastTimeStamp: 0,
@@ -111,11 +93,11 @@ class Spinner_06 extends Spinner {
 }
 
 class Spinner_07 extends Spinner {
-  name: string = "Spinner_07";
-  creator: string = "lunarfang_416";
+  name: string = 'Spinner_07';
+  creator: string = 'lunarfang_416';
   baseState: State = {
     index: 0,
-    spinner: ["◰", "◳", "◲", "◱"],
+    spinner: ['◰', '◳', '◲', '◱'],
     maxLength: 160,
     speed: 150,
     pastTimeStamp: 0,
@@ -123,47 +105,47 @@ class Spinner_07 extends Spinner {
 }
 
 class Spinner_08 extends Spinner {
-  name: string = "Spinner_08";
-  creator: string = "lunarfang_416";
+  name: string = 'Spinner_08';
+  creator: string = 'lunarfang_416';
   baseState: State = {
     index: 0,
-    spinner: ["◐", "◓", "◑", "◒"],
+    spinner: ['◐', '◓', '◑', '◒'],
     maxLength: 160,
     speed: 150,
     pastTimeStamp: 0,
   };
 }
 class Spinner_09 extends Spinner {
-  name: string = "Spinner_09";
-  creator: string = "lunarfang_416";
+  name: string = 'Spinner_09';
+  creator: string = 'lunarfang_416';
   baseState: State = {
     index: 0,
-    spinner: ["|", "/", "-", "\\", "\\"],
+    spinner: ['|', '/', '-', '\\', '\\'],
     maxLength: 160,
     speed: 150,
     pastTimeStamp: 0,
   };
 }
 class Spinner_10 extends Spinner {
-  name: string = "Spinner_10";
-  creator: string = "lunarfang_416";
+  name: string = 'Spinner_10';
+  creator: string = 'lunarfang_416';
   baseState: State = {
     index: 0,
-    spinner: [".", "o", "O", "@", "*"],
+    spinner: ['.', 'o', 'O', '@', '*'],
     maxLength: 160,
     speed: 150,
     pastTimeStamp: 0,
   };
 }
 class Spinner_11 extends Spinner {
-  name: string = "Spinner_11";
-  creator: string = "lunarfang_416";
+  name: string = 'Spinner_11';
+  creator: string = 'lunarfang_416';
   baseState: State = {
     index: 0,
-    spinner: ["_◡◡_","_⊙⊙_","_◠◠_"],
+    spinner: ['_◡◡_', '_⊙⊙_', '_◠◠_'],
     maxLength: 160,
     speed: 150,
-    pastTimeStamp: 0
+    pastTimeStamp: 0,
   };
 }
 

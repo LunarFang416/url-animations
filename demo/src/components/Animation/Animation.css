@@ -3,7 +3,8 @@
   border: 2px solid #000;
   /* padding: 10px 60px; */
   font-size: 1rem;
-  color: red
+  color: red;
+  position: relative;
 }
 
 .animation-button:hover{

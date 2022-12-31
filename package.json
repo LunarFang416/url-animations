@@ -1,49 +1,44 @@
 {
-  "homepage": "https://lunarfang416.github.io/url-animations/",
   "name": "url-animations",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.10",
-    "@types/react": "^18.0.26",
-    "@types/react-dom": "^18.0.9",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "typescript": "^4.9.4",
-    "web-vitals": "^2.1.4"
-  },
+  "version": "1.0.3",
+  "description": "Animations in your Browser URL Field",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "prepare": "npm run build"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LunarFang416/url-animations.git"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LunarFang416/url-animations/issues"
   },
+  "homepage": "https://github.com/LunarFang416/url-animations#readme",
   "devDependencies": {
-    "gh-pages": "^4.0.0"
-  }
+    "prettier": "^2.8.1",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.9.4",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  },
+  "keywords": [
+    "animations",
+    "progress",
+    "activity",
+    "spinners",
+    "loading-animations",
+    "loading",
+    "loader"
+  ],
+  "sideEffects": false
 }

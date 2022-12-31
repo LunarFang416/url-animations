@@ -1,19 +1,22 @@
-import { useEffect, useState, useRef } from "react"
-import Animation from "../Animation/Animation";
+import { useEffect } from "react"
+import AnimationCard from "../Animation/Animation";
 import Custom from "../Custom/Custom";
-import ANIMATIONS from "../../animations/exports";
-import BaseAnimation from "../../animations/base";
+import {URLAnimation, Animations, BaseAnimation} from "url-animations";
 
-import URLAnimation from "../../hook";
 import github from "../../assets/github-mark.png"
 import coffee from "../../assets/bmc-logo.png"
+import npm from "../../assets/npm-logo.png"
 import "./Home.css"
 
 const Home = () => {
   const URL = URLAnimation();
   useEffect(() => {
-    URL.start(ANIMATIONS.Default);
+    URL.start(Animations.Default);
   }, [])
+
+  const changeAnimation = (animation: BaseAnimation) => {
+    URL.start(animation);
+  };
 
   return (
     <div className="home-div">
@@ -47,22 +50,20 @@ const Home = () => {
         </div>
         <div className="homeLinks">
           <span className="logo-div">
+            <a href="https://github.com/lunarfang416/url-animations" target="_blank" rel="noreferrer">
             <h4>contribute </h4>
-            <a
-              href="https://github.com/lunarfang416/url-animations"
-              target="_blank"
-              rel="noreferrer"
-            >
               <img className="home-logo" src={github} alt="github"></img>
             </a>
           </span>
           <span className="logo-div">
+            <a href="https://www.npmjs.com/package/url-animations" target="_blank" rel="noreferrer">
+            <h4>install </h4>
+              <img className="home-logo-npm home-logo" src={npm} alt="npm"></img>
+            </a>
+          </span>
+          <span className="logo-div">
+            <a href="https://www.buymeacoffee.com/lunarfang416" target="_blank" rel="noreferrer">
             <h4>support </h4>
-            <a
-              href="https://www.buymeacoffee.com/lunarfang416"
-              target="_blank"
-              rel="noreferrer"
-            >
               <img className="home-logo" src={coffee} alt="coffee"></img>
             </a>
           </span>
@@ -70,14 +71,10 @@ const Home = () => {
       </div>
       <Custom URL={URL} />
       <div className="animation-div">
-        {Object.keys(ANIMATIONS).map((item, i) => {
-          return (
-            <Animation
-              animation={ANIMATIONS[item]}
-              changeAnimation={() => URL.start(ANIMATIONS[item])}
-              key={i}
-            />
-          );
+        {Object.keys(Animations).map((item, i) => {
+          return Animations[item].name !== 'Custom' ? (
+            <AnimationCard animation={Animations[item]} changeAnimation={changeAnimation} key={i} />
+          ) : null;
         })}
       </div>
     </div>
