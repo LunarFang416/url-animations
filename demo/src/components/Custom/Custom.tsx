@@ -8,7 +8,7 @@ const CustomCard = ( {URL}: {URL: any} ) => {
   const [frames, setFrames] = useState(
     "(>'-')>\n^('-')^\n<('-'<)\n^('-')^"
   );
-  const [frameRate, setFrameRate] = useState(0);
+  const [frameRate, setFrameRate] = useState(500);
   const [enabled, setEnabled] = useState(false)
   CustomAnimationObj.baseState.frameRate = frameRate;
   CustomAnimationObj.baseState.frames = frames.trim().split("\n");

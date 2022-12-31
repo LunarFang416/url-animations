@@ -17,7 +17,8 @@ class Custom implements BaseAnimation {
   };
   constructor(frames: string[] = ["(>'-')>", "^('-')^", "<('-'<)", "^('-')^"], frameRate: number = 500) {
     this.baseState.frames = frames;
-    this.baseState.frameRate = frameRate;
+    if(frameRate > 1000) this.baseState.frameRate = 500;
+    else this.baseState.frameRate = frameRate;
   }
   nextState(timestamp: number, state: State): { nextFrame: string; state: State } {
     if (timestamp - state.pastTimeStamp > 1000 - state.frameRate) {
