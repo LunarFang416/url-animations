@@ -2,7 +2,7 @@
 
 Add loading animations to your website in your browser URL field.
 
-[Try out the live demo!](lunarfang416.github.io/url-animations/)
+[Try out the live demo!](https://lunarfang416.github.io/url-animations/)
 
 https://user-images.githubusercontent.com/73078183/209571272-a7110cbf-7fb4-4b21-b198-1f9968b92a00.mov
 
@@ -11,7 +11,7 @@ https://user-images.githubusercontent.com/73078183/209571272-a7110cbf-7fb4-4b21-
 
 Install the NPM package using `npm i url-animations`
 
-To use the Animations you must first decide what animation to use. You can choose from the different stock animations from [here](lunarfang416.github.io/url-animations/).
+To use the Animations you must first decide what animation to use. You can choose from the different stock animations from [here](https://lunarfang416.github.io/url-animations/).
 
 ```javascript
 import { URLAnimations, Animations } from 'url-animations';
@@ -27,7 +27,7 @@ setTimeout(() => {
 
 To implement your own animation you can implement the BaseAnimation interface from scratch (More info in Contribution Section). Or implement a class adhering to the BaseAnimation interface (see ./src/animations/custom).
 
-However, if you do not want to create an animation interface/class from scratch, you can use the Custom Animation Class to specify a sequence of frames along with the frameRate (aka speed of animation), which is defaulted to 500. If you want to test this out, you can do to the [demo](lunarfang416.github.io/url-animations/) and configure your custom sequence using the custom option.
+However, if you do not want to create an animation interface/class from scratch, you can use the Custom Animation Class to specify a sequence of frames along with the frameRate (aka speed of animation), which is defaulted to 500. If you want to test this out, you can do to the [demo](https://lunarfang416.github.io/url-animations/) and configure your custom sequence using the custom option.
 
 ```javascript
 import { URLAnimations, Animations, Custom } from 'url-animations';
@@ -88,7 +88,7 @@ const URLAnimation: () => {
 
 ### `Animations`
 
-Contains All stock URL Animation implementations to use. Can demo [here](lunarfang416.github.io/url-animations/).
+Contains All stock URL Animation implementations to use. Can demo [here](https://lunarfang416.github.io/url-animations/).
 
 ```typescript
 export declare const Animations: {
