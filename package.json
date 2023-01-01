@@ -1,6 +1,6 @@
 {
   "name": "url-animations",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "description": "Animations in your Browser URL Field",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
+    "build": "webpack --watch",
     "format": "prettier --write \"src/**/*.ts\"",
     "prepare": "npm run build"
   },

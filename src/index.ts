@@ -75,13 +75,13 @@ export const URLAnimation = () => {
       const next = animation.nextState(Date.now(), state);
       frame = next.nextFrame;
       state = next.state;
-      window.history.pushState(null, '', `${window.location.pathname + window.location.search}#${frame}`);
+      window.location.replace(`${window.location.pathname + window.location.search}#${frame}`);
     }, 66);
   };
 
   const stop = () => {
     clearInterval(interval);
-    window.history.pushState(null, '', `${window.location.pathname + window.location.search}`);
+    window.location.replace(`${window.location.pathname + window.location.search}`);
   };
 
   return {
