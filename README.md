@@ -17,7 +17,7 @@ To use the Animations you must first decide what animation to use. You can choos
 import { URLAnimations, Animations } from 'url-animations';
 
 const URL = URLAnimations();
-URL.start(Animations.deafult) 
+URL.start(Animations.default) 
 // specify Animation here
 
 setTimeout(() => {
