@@ -1,0 +1,99 @@
+/*!**********************!*\
+          !*** ./src/index.ts ***!
+          \**********************/
+
+/*!*****************************!*\
+          !*** ./src/animations/o.ts ***!
+          \*****************************/
+
+/*!********************************!*\
+          !*** ./src/animations/flip.ts ***!
+          \********************************/
+
+/*!********************************!*\
+          !*** ./src/animations/swim.ts ***!
+          \********************************/
+
+/*!********************************!*\
+          !*** ./src/animations/wave.ts ***!
+          \********************************/
+
+/*!*********************************!*\
+          !*** ./src/animations/plane.ts ***!
+          \*********************************/
+
+/*!*********************************!*\
+          !*** ./src/animations/shark.ts ***!
+          \*********************************/
+
+/*!*********************************!*\
+          !*** ./src/animations/wave2.ts ***!
+          \*********************************/
+
+/*!**********************************!*\
+          !*** ./src/animations/bounce.ts ***!
+          \**********************************/
+
+/*!**********************************!*\
+          !*** ./src/animations/custom.ts ***!
+          \**********************************/
+
+/*!**********************************!*\
+          !*** ./src/animations/source.ts ***!
+          \**********************************/
+
+/*!***********************************!*\
+          !*** ./src/animations/default.ts ***!
+          \***********************************/
+
+/*!************************************!*\
+          !*** ./src/animations/spinners.ts ***!
+          \************************************/
+
+/*!************************************!*\
+          !*** ./src/animations/squiggle.ts ***!
+          \************************************/
+
+/*!*************************************!*\
+          !*** ./src/animations/og_loader.ts ***!
+          \*************************************/
+
+/**
+ * @license React
+ * react-dom.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * @license React
+ * react-jsx-runtime.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * @license React
+ * react.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * @license React
+ * scheduler.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
