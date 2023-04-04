@@ -27,7 +27,7 @@ setTimeout(() => {
 
 To implement your own animation you can implement the BaseAnimation interface from scratch (More info in Contribution Section). Or implement a class adhering to the BaseAnimation interface (see ./src/animations/custom).
 
-However, if you do not want to create an animation interface/class from scratch, you can use the Custom Animation Class to specify a sequence of frames along with the frameRate (aka speed of animation), which is defaulted to 500. If you want to test this out, you can do to the [demo](https://lunarfang416.github.io/url-animations/) and configure your custom sequence using the custom option.
+However, if you do not want to create an animation interface/class from scratch, you can use the Custom Animation Class to specify a sequence of frames along with the frameRate (aka speed of animation), which is defaulted to 500. If you want to test this out, you can go to the [demo](https://lunarfang416.github.io/url-animations/) and configure your custom sequence using the custom option.
 
 ```javascript
 import { URLAnimations, Animations, Custom } from 'url-animations';
@@ -148,7 +148,7 @@ Contribution to the 'url-animations' package is open and you can share your own 
 ```typescript
 import YourAnimation from './yourAnimation.ts'
 ...
-export const Animatinos: { [key: string]: BaseAnimation } = {
+export const Animations: { [key: string]: BaseAnimation } = {
   ...,
   YourAnimation : YourAnimation
 }
